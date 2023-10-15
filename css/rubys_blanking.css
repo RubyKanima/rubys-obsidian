@@ -1,0 +1,27 @@
+/* .document or .nolink
+* makes links in documents blank so you can export into PDF without the style for hypertexts.
+*/
+.document a.internal-link,
+.nolink a.internal-link{
+	--link-color: var(--text-normal);
+	--link-decoration: none;
+	--link-color-hover: gray;
+	--link-decoration-hover: none;
+}
+
+/* .document or .blank-emed
+* makes embedded files look like they're not embedded but part of the file.
+* The link icon is still visible in Obsidian but not in the PDF.
+*/
+.document .internal-embed,
+.document .markdown-embed,
+.blank-embed .internal-embed,
+.blank-embed .markdown- embed{
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+.document .markdown-embed-title,
+.blank-embed .markdown-embed-title{
+	display: none;
+}
