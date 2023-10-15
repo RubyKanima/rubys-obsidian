@@ -1,0 +1,49 @@
+/* .framed-callout
+* makes the callout only framed in a slightly translucent border
+*/
+.framed-callout .callout{
+	--callout-border-width: 2px;
+	--callout-radius: 6px;
+	--callout-border-opacity: 0.5;
+	--list-marker-color:rgba(var(--callout-color), 0.5);
+	background-color: rgba(0,0,0,0);
+}
+/*
+* Makes the color of the left broder from Blockquots the same color as the callout it is in
+*/
+.callout blockquote{
+	border-left-color: rgba(var(--callout-color), 0.5);
+}
+.callout-title-inner {
+	font-size: 17px;
+}
+
+/*
+* Enables Black and White Callouts with [!BW]
+*/
+.theme-dark .callout[data-callout="bw"] {
+	--callout-color: 255,255,255;
+}
+.theme-light .callout[data-callout="bw"] {
+	--callout-color: 0,0,0;
+}
+
+/*Makes the icon invisible*/ 
+.callout[data-callout="bw"] .callout-icon svg{
+	visibility: hidden;
+}
+/*Circle as Icon of BW Callouts with the icon's border*/ 
+.callout[data-callout="bw"] .callout-icon{
+	border: 1px solid rgb(var(--callout-color));
+	width: 8px;
+	height: 8px;
+	margin-top: 5px;
+	border-radius: 100%;
+}
+/*
+* Aligns the left border from a blockquote with the icon from the shoutout and lists
+*/
+blockquote{
+	--blockquote-border-color: var(--list-marker-color);
+	margin-block-start: 0.5em;
+}
