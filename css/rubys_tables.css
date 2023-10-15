@@ -1,0 +1,51 @@
+/*
+Extention for this Obsidian css-snippet https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084
+*/
+/* .blank-table */
+/* -------------------------------------- */
+/* Resetting the whole Table (unfinished) */
+/* -------------------------------------- */
+.blank-table th,
+.blank-table tr,
+.blank-table td,
+.blank-table table{a
+	font-weight: normal;
+	background-color: rgba(0,0,0,0);
+	text-transform:none;
+}
+/* .customHeader */
+/* ------------------------------------------------- */
+/* Being able to mark cells with bold text as header */
+/* ------------------------------------------------- */
+.customHeader thead tr >*:nth-child(n):has(strong),
+.customHeader tbody > tr >*:first-child:has(strong)
+{
+	background-color: rgba(122,122,122,0.15);
+	border: 1px solid rgba(122,122,122,0.5);
+}
+.customHeader thead tr >*:nth-child(1){
+	border: 1px solid rgba(122,122,122,0.5);
+	border-top: 0px;
+	border-left: 0px;
+}
+/* .radius-table*/
+/* ---------------------- */
+/* Adding a curved border */
+/* ---------------------- */
+.radius-table table{
+border-radius: 6px;
+border-spacing: 0;
+border-collapse: separate;
+}
+.radius-table table tr:first-child th:first-child{
+    border-top-left-radius:6px
+}
+.radius-table table tr:first-child th:last-child{
+    border-top-right-radius:6px
+}
+.radius-table table tr:last-child td:first-child {
+    border-bottom-left-radius:6px;
+}
+.radius-table table tr:last-child td:last-child {
+    border-bottom-right-radius:6px;
+}
