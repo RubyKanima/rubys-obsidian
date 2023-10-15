@@ -1,0 +1,19 @@
+/*
+* Makes pagebreaks visible in viewmode and invisible when exported into PDF
+*/
+@media screen {
+  div[style^=page-break] {
+    position: relative;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  div[style^=page-break]::before {
+    font-size: 0.8rem;
+    content: '';
+    display: block;
+    background-color: var(--background-primary);
+    padding: 0px 10px;
+    color: var(--text-faint);
+	border: 1px solid var(--text-faint);
+  }
+}
